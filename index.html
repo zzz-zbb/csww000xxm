@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招商引资管理后台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>招商引资管理系统</h1>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active" data-target="dashboard">
+                        <span class="icon">📊</span>
+                        <span>仪表盘</span>
+                    </li>
+                    <li data-target="projects">
+                        <span class="icon">🏗️</span>
+                        <span>项目管理</span>
+                    </li>
+                    <li data-target="investors">
+                        <span class="icon">💼</span>
+                        <span>投资方管理</span>
+                    </li>
+                    <li data-target="statistics">
+                        <span class="icon">📈</span>
+                        <span>数据分析</span>
+                    </li>
+                    <li data-target="settings">
+                        <span class="icon">⚙️</span>
+                        <span>系统设置</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="content">
+            <!-- 顶部导航 -->
+            <header class="header">
+                <div class="search-box">
+                    <input type="text" placeholder="搜索...">
+                    <button>🔍</button>
+                </div>
+                <div class="user-info">
+                    <span>管理员</span>
+                    <div class="avatar">👤</div>
+                </div>
+            </header>
+
+            <!-- 页面内容 -->
+            <div class="page-content">
+                <!-- 仪表盘 -->
+                <div id="dashboard" class="page active">
+                    <h2>仪表盘</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-content">
+                                <h3>总投资额</h3>
+                                <p>¥12.5亿</p>
+                                <span class="trend up">+12.3%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📋</div>
+                            <div class="stat-content">
+                                <h3>项目数量</h3>
+                                <p>128</p>
+                                <span class="trend up">+8.7%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">🤝</div>
+                            <div class="stat-content">
+                                <h3>投资方</h3>
+                                <p>86</p>
+                                <span class="trend up">+5.2%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">📅</div>
+                            <div class="stat-content">
+                                <h3>本月新增</h3>
+                                <p>15</p>
+                                <span class="trend up">+22.1%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts-section">
+                        <div class="chart-card">
+                            <h3>投资趋势分析</h3>
+                            <div class="chart-placeholder">
+                                <div class="chart-bar" style="height: 60%;"></div>
+                                <div class="chart-bar" style="height: 80%;"></div>
+                                <div class="chart-bar" style="height: 45%;"></div>
+                                <div class="chart-bar" style="height: 70%;"></div>
+                                <div class="chart-bar" style="height: 90%;"></div>
+                                <div class="chart-bar" style="height: 65%;"></div>
+                            </div>
+                        </div>
+                        <div class="chart-card">
+                            <h3>项目行业分布</h3>
+                            <div class="pie-chart-placeholder">
+                                <div class="pie-slice" style="--size: 40%;"></div>
+                                <div class="pie-slice" style="--size: 30%;"></div>
+                                <div class="pie-slice" style="--size: 20%;"></div>
+                                <div class="pie-slice" style="--size: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h3>最近活动</h3>
+                        <table class="activity-table">
+                            <thead>
+                                <tr>
+                                    <th>项目名称</th>
+                                    <th>投资方</th>
+                                    <th>投资金额</th>
+                                    <th>状态</th>
+                                    <th>日期</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>智能制造产业园</td>
+                                    <td>科技创新投资</td>
+                                    <td>¥2.3亿</td>
+                                    <td><span class="status active">进行中</span></td>
+                                    <td>2026-02-25</td>
+                                </tr>
+                                <tr>
+                                    <td>数字经济园区</td>
+                                    <td>未来资本</td>
+                                    <td>¥1.8亿</td>
+                                    <td><span class="status completed">已完成</span></td>
+                                    <td>2026-02-20</td>
+                                </tr>
+                                <tr>
+                                    <td>绿色能源项目</td>
+                                    <td>环保投资集团</td>
+                                    <td>¥3.1亿</td>
+                                    <td><span class="status active">进行中</span></td>
+                                    <td>2026-02-18</td>
+                                </tr>
+                                <tr>
+                                    <td>生物医药基地</td>
+                                    <td>健康产业基金</td>
+                                    <td>¥2.7亿</td>
+                                    <td><span class="status pending">待审批</span></td>
+                                    <td>2026-02-15</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 项目管理 -->
+                <div id="projects" class="page">
+                    <div class="page-header">
+                        <h2>项目管理</h2>
+                        <button class="btn-primary">+ 新增项目</button>
+                    </div>
+                    <div class="filter-bar">
+                        <select class="filter-select">
+                            <option>全部状态</option>
+                            <option>进行中</option>
+                            <option>已完成</option>
+                            <option>待审批</option>
+                        </select>
+                        <input type="text" class="filter-input" placeholder="搜索项目...">
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>项目ID</th>
+                                <th>项目名称</th>
+                                <th>所属行业</th>
+                                <th>投资金额</th>
+                                <th>投资方</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PROJ001</td>
+                                <td>智能制造产业园</td>
+                                <td>制造业</td>
+                                <td>¥2.3亿</td>
+                                <td>科技创新投资</td>
+                                <td><span class="status active">进行中</span></td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PROJ002</td>
+                                <td>数字经济园区</td>
+                                <td>数字经济</td>
+                                <td>¥1.8亿</td>
+                                <td>未来资本</td>
+                                <td><span class="status completed">已完成</span></td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PROJ003</td>
+                                <td>绿色能源项目</td>
+                                <td>新能源</td>
+                                <td>¥3.1亿</td>
+                                <td>环保投资集团</td>
+                                <td><span class="status active">进行中</span></td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PROJ004</td>
+                                <td>生物医药基地</td>
+                                <td>生物医药</td>
+                                <td>¥2.7亿</td>
+                                <td>健康产业基金</td>
+                                <td><span class="status pending">待审批</span></td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 投资方管理 -->
+                <div id="investors" class="page">
+                    <div class="page-header">
+                        <h2>投资方管理</h2>
+                        <button class="btn-primary">+ 新增投资方</button>
+                    </div>
+                    <div class="filter-bar">
+                        <select class="filter-select">
+                            <option>全部类型</option>
+                            <option>企业投资</option>
+                            <option>基金投资</option>
+                            <option>政府投资</option>
+                        </select>
+                        <input type="text" class="filter-input" placeholder="搜索投资方...">
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>投资方ID</th>
+                                <th>投资方名称</th>
+                                <th>类型</th>
+                                <th>联系人</th>
+                                <th>联系电话</th>
+                                <th>投资项目数</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INV001</td>
+                                <td>科技创新投资</td>
+                                <td>企业投资</td>
+                                <td>张三</td>
+                                <td>138****1234</td>
+                                <td>12</td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INV002</td>
+                                <td>未来资本</td>
+                                <td>基金投资</td>
+                                <td>李四</td>
+                                <td>139****5678</td>
+                                <td>8</td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INV003</td>
+                                <td>环保投资集团</td>
+                                <td>企业投资</td>
+                                <td>王五</td>
+                                <td>137****9012</td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>INV004</td>
+                                <td>健康产业基金</td>
+                                <td>基金投资</td>
+                                <td>赵六</td>
+                                <td>136****3456</td>
+                                <td>6</td>
+                                <td>
+                                    <button class="btn-edit">编辑</button>
+                                    <button class="btn-delete">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 数据分析 -->
+                <div id="statistics" class="page">
+                    <h2>数据分析</h2>
+                    <div class="stats-container">
+                        <div class="stat-block">
+                            <h3>投资行业分布</h3>
+                            <div class="industry-distribution">
+                                <div class="industry-item">
+                                    <span class="industry-name">制造业</span>
+                                    <div class="industry-bar" style="width: 40%;"></div>
+                                    <span class="industry-percent">40%</span>
+                                </div>
+                                <div class="industry-item">
+                                    <span class="industry-name">数字经济</span>
+                                    <div class="industry-bar" style="width: 30%;"></div>
+                                    <span class="industry-percent">30%</span>
+                                </div>
+                                <div class="industry-item">
+                                    <span class="industry-name">新能源</span>
+                                    <div class="industry-bar" style="width: 15%;"></div>
+                                    <span class="industry-percent">15%</span>
+                                </div>
+                                <div class="industry-item">
+                                    <span class="industry-name">生物医药</span>
+                                    <div class="industry-bar" style="width: 10%;"></div>
+                                    <span class="industry-percent">10%</span>
+                                </div>
+                                <div class="industry-item">
+                                    <span class="industry-name">其他</span>
+                                    <div class="industry-bar" style="width: 5%;"></div>
+                                    <span class="industry-percent">5%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-block">
+                            <h3>投资趋势</h3>
+                            <div class="trend-chart">
+                                <div class="trend-item">
+                                    <span class="trend-month">1月</span>
+                                    <div class="trend-line" style="height: 60%;"></div>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-month">2月</span>
+                                    <div class="trend-line" style="height: 75%;"></div>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-month">3月</span>
+                                    <div class="trend-line" style="height: 50%;"></div>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-month">4月</span>
+                                    <div class="trend-line" style="height: 80%;"></div>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-month">5月</span>
+                                    <div class="trend-line" style="height: 90%;"></div>
+                                </div>
+                                <div class="trend-item">
+                                    <span class="trend-month">6月</span>
+                                    <div class="trend-line" style="height: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 系统设置 -->
+                <div id="settings" class="page">
+                    <h2>系统设置</h2>
+                    <div class="settings-container">
+                        <div class="setting-section">
+                            <h3>基本设置</h3>
+                            <form class="setting-form">
+                                <div class="form-group">
+                                    <label>系统名称</label>
+                                    <input type="text" value="招商引资管理系统">
+                                </div>
+                                <div class="form-group">
+                                    <label>管理员邮箱</label>
+                                    <input type="email" value="admin@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>联系方式</label>
+                                    <input type="text" value="400-123-4567">
+                                </div>
+                                <button type="button" class="btn-primary">保存设置</button>
+                            </form>
+                        </div>
+                        <div class="setting-section">
+                            <h3>用户管理</h3>
+                            <table class="user-table">
+                                <thead>
+                                    <tr>
+                                        <th>用户名</th>
+                                        <th>角色</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>admin</td>
+                                        <td>超级管理员</td>
+                                        <td><span class="status active">活跃</span></td>
+                                        <td>
+                                            <button class="btn-edit">编辑</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>manager</td>
+                                        <td>项目管理员</td>
+                                        <td><span class="status active">活跃</span></td>
+                                        <td>
+                                            <button class="btn-edit">编辑</button>
+                                            <button class="btn-delete">删除</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn-primary">+ 新增用户</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
