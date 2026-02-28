@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招商引资驾驶舱</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="cockpit-container">
+        <!-- 顶部标题栏 -->
+        <header class="cockpit-header">
+            <div class="header-left">
+                <div class="current-time" id="currentTime">2026-02-27 12:00:00</div>
+            </div>
+            <div class="header-center">
+                <h1 class="main-title">招商引资数据驾驶舱</h1>
+            </div>
+            <div class="header-right">
+                <div class="weather-info">
+                    <span class="weather-icon">☀️</span>
+                    <span class="weather-temp">25°C</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="cockpit-content">
+            <!-- 左侧区域 -->
+            <div class="left-panel">
+                <!-- 投资总额统计 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>投资总额统计</h3>
+                        <div class="refresh-btn">🔄</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="total-investment">
+                            <div class="investment-value">¥12.5亿</div>
+                            <div class="investment-trend">
+                                <span class="trend-icon">📈</span>
+                                <span class="trend-value">+12.3%</span>
+                                <span class="trend-label">较上月</span>
+                            </div>
+                        </div>
+                        <div class="investment-breakdown">
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">本月投资</span>
+                                <span class="breakdown-value">¥2.3亿</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">累计投资</span>
+                                <span class="breakdown-value">¥12.5亿</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目行业分布 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>项目行业分布</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="industry-chart">
+                            <div class="pie-chart-container">
+                                <div class="pie-chart">
+                                    <div class="pie-slice" style="--percent: 40; --color: #3498db;"></div>
+                                    <div class="pie-slice" style="--percent: 30; --color: #27ae60;"></div>
+                                    <div class="pie-slice" style="--percent: 15; --color: #f39c12;"></div>
+                                    <div class="pie-slice" style="--percent: 10; --color: #e74c3c;"></div>
+                                    <div class="pie-slice" style="--percent: 5; --color: #9b59b6;"></div>
+                                </div>
+                                <div class="pie-center">
+                                    <div class="center-value">128</div>
+                                    <div class="center-label">项目总数</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="industry-legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #3498db;"></span>
+                                <span class="legend-label">制造业</span>
+                                <span class="legend-percent">40%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #27ae60;"></span>
+                                <span class="legend-label">数字经济</span>
+                                <span class="legend-percent">30%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #f39c12;"></span>
+                                <span class="legend-label">新能源</span>
+                                <span class="legend-percent">15%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #e74c3c;"></span>
+                                <span class="legend-label">生物医药</span>
+                                <span class="legend-percent">10%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #9b59b6;"></span>
+                                <span class="legend-label">其他</span>
+                                <span class="legend-percent">5%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 投资方排名 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>投资方排名</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="investor-ranking">
+                            <div class="ranking-item">
+                                <div class="ranking-number">1</div>
+                                <div class="ranking-info">
+                                    <div class="ranking-name">科技创新投资</div>
+                                    <div class="ranking-bar">
+                                        <div class="bar-fill" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="ranking-value">¥5.6亿</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="ranking-number">2</div>
+                                <div class="ranking-info">
+                                    <div class="ranking-name">环保投资集团</div>
+                                    <div class="ranking-bar">
+                                        <div class="bar-fill" style="width: 75%;"></div>
+                                    </div>
+                                </div>
+                                <div class="ranking-value">¥4.2亿</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="ranking-number">3</div>
+                                <div class="ranking-info">
+                                    <div class="ranking-name">未来资本</div>
+                                    <div class="ranking-bar">
+                                        <div class="bar-fill" style="width: 60%;"></div>
+                                    </div>
+                                </div>
+                                <div class="ranking-value">¥3.2亿</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="ranking-number">4</div>
+                                <div class="ranking-info">
+                                    <div class="ranking-name">健康产业基金</div>
+                                    <div class="ranking-bar">
+                                        <div class="bar-fill" style="width: 45%;"></div>
+                                    </div>
+                                </div>
+                                <div class="ranking-value">¥2.7亿</div>
+                            </div>
+                            <div class="ranking-item">
+                                <div class="ranking-number">5</div>
+                                <div class="ranking-info">
+                                    <div class="ranking-name">新兴产业投资</div>
+                                    <div class="ranking-bar">
+                                        <div class="bar-fill" style="width: 30%;"></div>
+                                    </div>
+                                </div>
+                                <div class="ranking-value">¥1.8亿</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 中间区域 -->
+            <div class="center-panel">
+                <!-- 核心指标 -->
+                <div class="key-metrics">
+                    <div class="metric-card">
+                        <div class="metric-icon">💰</div>
+                        <div class="metric-content">
+                            <div class="metric-value">¥12.5亿</div>
+                            <div class="metric-label">总投资额</div>
+                            <div class="metric-trend up">+12.3%</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">📋</div>
+                        <div class="metric-content">
+                            <div class="metric-value">128</div>
+                            <div class="metric-label">项目数量</div>
+                            <div class="metric-trend up">+8.7%</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">🤝</div>
+                        <div class="metric-content">
+                            <div class="metric-value">86</div>
+                            <div class="metric-label">投资方</div>
+                            <div class="metric-trend up">+5.2%</div>
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-icon">📅</div>
+                        <div class="metric-content">
+                            <div class="metric-value">15</div>
+                            <div class="metric-label">本月新增</div>
+                            <div class="metric-trend up">+22.1%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 地图展示 -->
+                <div class="map-container">
+                    <div class="map-header">
+                        <h3>项目分布地图</h3>
+                    </div>
+                    <div class="map-content">
+                        <div class="map-placeholder">
+                            <div class="map-points">
+                                <div class="map-point" style="top: 30%; left: 40%;">
+                                    <div class="point-marker"></div>
+                                    <div class="point-label">智能制造产业园</div>
+                                </div>
+                                <div class="map-point" style="top: 50%; left: 60%;">
+                                    <div class="point-marker"></div>
+                                    <div class="point-label">数字经济园区</div>
+                                </div>
+                                <div class="map-point" style="top: 70%; left: 35%;">
+                                    <div class="point-marker"></div>
+                                    <div class="point-label">绿色能源项目</div>
+                                </div>
+                                <div class="map-point" style="top: 45%; left: 75%;">
+                                    <div class="point-marker"></div>
+                                    <div class="point-label">生物医药基地</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 投资趋势 -->
+                <div class="trend-container">
+                    <div class="trend-header">
+                        <h3>投资趋势分析</h3>
+                    </div>
+                    <div class="trend-content">
+                        <div class="trend-chart">
+                            <div class="trend-bar" style="height: 60%;">
+                                <div class="bar-label">1月</div>
+                                <div class="bar-value">¥1.8亿</div>
+                            </div>
+                            <div class="trend-bar" style="height: 75%;">
+                                <div class="bar-label">2月</div>
+                                <div class="bar-value">¥2.2亿</div>
+                            </div>
+                            <div class="trend-bar" style="height: 50%;">
+                                <div class="bar-label">3月</div>
+                                <div class="bar-value">¥1.5亿</div>
+                            </div>
+                            <div class="trend-bar" style="height: 80%;">
+                                <div class="bar-label">4月</div>
+                                <div class="bar-value">¥2.4亿</div>
+                            </div>
+                            <div class="trend-bar" style="height: 90%;">
+                                <div class="bar-label">5月</div>
+                                <div class="bar-value">¥2.7亿</div>
+                            </div>
+                            <div class="trend-bar" style="height: 70%;">
+                                <div class="bar-label">6月</div>
+                                <div class="bar-value">¥2.1亿</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧区域 -->
+            <div class="right-panel">
+                <!-- 实时动态 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>实时动态</h3>
+                        <div class="live-indicator">
+                            <span class="live-dot"></span>
+                            <span class="live-text">实时</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-feed">
+                            <div class="feed-item">
+                                <div class="feed-time">12:00</div>
+                                <div class="feed-content">
+                                    <div class="feed-title">智能制造产业园项目签约</div>
+                                    <div class="feed-desc">投资金额¥2.3亿</div>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="feed-time">11:30</div>
+                                <div class="feed-content">
+                                    <div class="feed-title">数字经济园区项目启动</div>
+                                    <div class="feed-desc">投资金额¥1.8亿</div>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="feed-time">10:45</div>
+                                <div class="feed-content">
+                                    <div class="feed-title">绿色能源项目审批通过</div>
+                                    <div class="feed-desc">投资金额¥3.1亿</div>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="feed-time">09:15</div>
+                                <div class="feed-content">
+                                    <div class="feed-title">生物医药基地项目立项</div>
+                                    <div class="feed-desc">投资金额¥2.7亿</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目状态 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>项目状态分布</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="status-distribution">
+                            <div class="status-item">
+                                <div class="status-info">
+                                    <span class="status-label">进行中</span>
+                                    <span class="status-count">68</span>
+                                </div>
+                                <div class="status-bar">
+                                    <div class="bar-fill" style="width: 53%; background: #3498db;"></div>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-info">
+                                    <span class="status-label">已完成</span>
+                                    <span class="status-count">42</span>
+                                </div>
+                                <div class="status-bar">
+                                    <div class="bar-fill" style="width: 33%; background: #27ae60;"></div>
+                                </div>
+                            </div>
+                            <div class="status-item">
+                                <div class="status-info">
+                                    <span class="status-label">待审批</span>
+                                    <span class="status-count">18</span>
+                                </div>
+                                <div class="status-bar">
+                                    <div class="bar-fill" style="width: 14%; background: #f39c12;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 目标完成度 -->
+                <div class="panel-card">
+                    <div class="card-header">
+                        <h3>年度目标完成度</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="goal-progress">
+                            <div class="progress-item">
+                                <div class="progress-label">投资额目标</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 83%;">
+                                        <span class="progress-text">83%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-value">¥12.5亿 / ¥15亿</div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">项目数目标</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 64%;">
+                                        <span class="progress-text">64%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-value">128 / 200</div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">投资方目标</div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%;">
+                                        <span class="progress-text">72%</span>
+                                    </div>
+                                </div>
+                                <div class="progress-value">86 / 120</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>招商引资小程序</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部状态栏 -->
+        <header class="status-bar">
+            <div class="status-left">
+                <span class="battery">🔋</span>
+                <span class="signal">📶</span>
+            </div>
+            <div class="status-center">
+                <span class="time">12:00</span>
+            </div>
+            <div class="status-right">
+                <span class="wifi">📡</span>
+            </div>
+        </header>
+
+        <!-- 导航栏 -->
+        <nav class="nav-bar">
+            <div class="nav-title">招商引资</div>
+            <div class="nav-icon">🔔</div>
+        </nav>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 首页 -->
+            <div id="home" class="page active">
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="搜索项目、投资方...">
+                    <button class="search-btn">🔍</button>
+                </div>
+
+                <!-- 快捷入口 -->
+                <div class="quick-access">
+                    <div class="quick-item" data-page="projects">
+                        <div class="quick-icon">🏗️</div>
+                        <span>项目</span>
+                    </div>
+                    <div class="quick-item" data-page="investors">
+                        <div class="quick-icon">💼</div>
+                        <span>投资方</span>
+                    </div>
+                    <div class="quick-item" data-page="statistics">
+                        <div class="quick-icon">📊</div>
+                        <span>数据</span>
+                    </div>
+                    <div class="quick-item" data-page="profile">
+                        <div class="quick-icon">👤</div>
+                        <span>我的</span>
+                    </div>
+                </div>
+
+                <!-- 数据概览 -->
+                <div class="data-overview">
+                    <h3>数据概览</h3>
+                    <div class="overview-cards">
+                        <div class="overview-card">
+                            <div class="card-value">¥12.5亿</div>
+                            <div class="card-label">总投资额</div>
+                            <div class="card-trend up">+12.3%</div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-value">128</div>
+                            <div class="card-label">项目数</div>
+                            <div class="card-trend up">+8.7%</div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="card-value">86</div>
+                            <div class="card-label">投资方</div>
+                            <div class="card-trend up">+5.2%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 最新项目 -->
+                <div class="latest-projects">
+                    <div class="section-header">
+                        <h3>最新项目</h3>
+                        <span class="more">查看全部</span>
+                    </div>
+                    <div class="project-list">
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>智能制造产业园</h4>
+                                <p>投资方：科技创新投资</p>
+                                <p>金额：¥2.3亿</p>
+                            </div>
+                            <div class="project-status active">进行中</div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>数字经济园区</h4>
+                                <p>投资方：未来资本</p>
+                                <p>金额：¥1.8亿</p>
+                            </div>
+                            <div class="project-status completed">已完成</div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-info">
+                                <h4>绿色能源项目</h4>
+                                <p>投资方：环保投资集团</p>
+                                <p>金额：¥3.1亿</p>
+                            </div>
+                            <div class="project-status active">进行中</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 项目页面 -->
+            <div id="projects" class="page">
+                <div class="page-header">
+                    <h2>项目管理</h2>
+                    <button class="add-btn">+</button>
+                </div>
+                <div class="filter-tabs">
+                    <div class="tab active">全部</div>
+                    <div class="tab">进行中</div>
+                    <div class="tab">已完成</div>
+                    <div class="tab">待审批</div>
+                </div>
+                <div class="project-list">
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4>智能制造产业园</h4>
+                            <span class="status-badge active">进行中</span>
+                        </div>
+                        <div class="card-body">
+                            <p><span>🏭</span> 制造业</p>
+                            <p><span>💰</span> ¥2.3亿</p>
+                            <p><span>🏢</span> 科技创新投资</p>
+                            <p><span>📅</span> 2026-02-25</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4>数字经济园区</h4>
+                            <span class="status-badge completed">已完成</span>
+                        </div>
+                        <div class="card-body">
+                            <p><span>💻</span> 数字经济</p>
+                            <p><span>💰</span> ¥1.8亿</p>
+                            <p><span>🏢</span> 未来资本</p>
+                            <p><span>📅</span> 2026-02-20</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-header">
+                            <h4>绿色能源项目</h4>
+                            <span class="status-badge active">进行中</span>
+                        </div>
+                        <div class="card-body">
+                            <p><span>⚡</span> 新能源</p>
+                            <p><span>💰</span> ¥3.1亿</p>
+                            <p><span>🏢</span> 环保投资集团</p>
+                            <p><span>📅</span> 2026-02-18</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 投资方页面 -->
+            <div id="investors" class="page">
+                <div class="page-header">
+                    <h2>投资方管理</h2>
+                    <button class="add-btn">+</button>
+                </div>
+                <div class="filter-tabs">
+                    <div class="tab active">全部</div>
+                    <div class="tab">企业投资</div>
+                    <div class="tab">基金投资</div>
+                    <div class="tab">政府投资</div>
+                </div>
+                <div class="investor-list">
+                    <div class="investor-card">
+                        <div class="investor-header">
+                            <div class="investor-avatar">科</div>
+                            <div class="investor-info">
+                                <h4>科技创新投资</h4>
+                                <span class="investor-type">企业投资</span>
+                            </div>
+                        </div>
+                        <div class="investor-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">12</span>
+                                <span class="stat-label">投资项目</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">¥5.6亿</span>
+                                <span class="stat-label">投资总额</span>
+                            </div>
+                        </div>
+                        <div class="investor-contact">
+                            <p>👤 张三</p>
+                            <p>📞 138****1234</p>
+                        </div>
+                    </div>
+                    <div class="investor-card">
+                        <div class="investor-header">
+                            <div class="investor-avatar">未</div>
+                            <div class="investor-info">
+                                <h4>未来资本</h4>
+                                <span class="investor-type">基金投资</span>
+                            </div>
+                        </div>
+                        <div class="investor-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">8</span>
+                                <span class="stat-label">投资项目</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">¥3.2亿</span>
+                                <span class="stat-label">投资总额</span>
+                            </div>
+                        </div>
+                        <div class="investor-contact">
+                            <p>👤 李四</p>
+                            <p>📞 139****5678</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 数据统计页面 -->
+            <div id="statistics" class="page">
+                <div class="page-header">
+                    <h2>数据统计</h2>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-card">
+                        <h3>投资行业分布</h3>
+                        <div class="pie-chart">
+                            <div class="pie-slice" style="--percent: 40; --color: #3498db;"></div>
+                            <div class="pie-slice" style="--percent: 30; --color: #27ae60;"></div>
+                            <div class="pie-slice" style="--percent: 15; --color: #f39c12;"></div>
+                            <div class="pie-slice" style="--percent: 10; --color: #e74c3c;"></div>
+                            <div class="pie-slice" style="--percent: 5; --color: #9b59b6;"></div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #3498db;"></span>
+                                <span>制造业 40%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #27ae60;"></span>
+                                <span>数字经济 30%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #f39c12;"></span>
+                                <span>新能源 15%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #e74c3c;"></span>
+                                <span>生物医药 10%</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background: #9b59b6;"></span>
+                                <span>其他 5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-card">
+                        <h3>投资趋势</h3>
+                        <div class="bar-chart">
+                            <div class="bar-item">
+                                <div class="bar" style="height: 60%;"></div>
+                                <span>1月</span>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar" style="height: 75%;"></div>
+                                <span>2月</span>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar" style="height: 50%;"></div>
+                                <span>3月</span>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar" style="height: 80%;"></div>
+                                <span>4月</span>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar" style="height: 90%;"></div>
+                                <span>5月</span>
+                            </div>
+                            <div class="bar-item">
+                                <div class="bar" style="height: 70%;"></div>
+                                <span>6月</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 个人中心页面 -->
+            <div id="profile" class="page">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <div class="avatar-circle">管</div>
+                    </div>
+                    <h3>管理员</h3>
+                    <p>超级管理员</p>
+                </div>
+                <div class="profile-menu">
+                    <div class="menu-item">
+                        <span class="menu-icon">📋</span>
+                        <span>我的项目</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon">💼</span>
+                        <span>我的投资方</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon">📊</span>
+                        <span>数据报告</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon">⚙️</span>
+                        <span>系统设置</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon">❓</span>
+                        <span>帮助与反馈</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-icon">📞</span>
+                        <span>联系我们</span>
+                        <span class="menu-arrow">›</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部导航 -->
+        <nav class="bottom-nav">
+            <div class="nav-item active" data-target="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">首页</span>
+            </div>
+            <div class="nav-item" data-target="projects">
+                <span class="nav-icon">🏗️</span>
+                <span class="nav-label">项目</span>
+            </div>
+            <div class="nav-item" data-target="investors">
+                <span class="nav-icon">💼</span>
+                <span class="nav-label">投资方</span>
+            </div>
+            <div class="nav-item" data-target="profile">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">我的</span>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
